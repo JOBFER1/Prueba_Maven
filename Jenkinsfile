@@ -16,7 +16,7 @@ pipeline {
     stage ('Deploy') {
     	steps {
 	    	//bat "move target/webapptest.war C:/apache-tomcat-10.0.27/webapps"
-	    	bat "powershell Copy-Item target/webapptest.war -Destination C:/apache-tomcat-10.0.27/webapps"
+	    	bat "powershell Copy-Item target/Prueba_Maven.war -Destination C:/apache-tomcat-10.0.27/webapps"
 	  	}
 	}
 
