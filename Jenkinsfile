@@ -15,7 +15,7 @@ pipeline {
 
     stage ('Deploy') {
     	steps {
-	    	sh "sudo cp -f target/Prueba_Maven.war /opt/Innovecture/apache-tomcat-10.0.27/webapps"
+	    	sh "sudo cp -f -S target/Prueba_Maven.war /opt/Innovecture/apache-tomcat-10.0.27/webapps"
 	  	}
 	}
 
