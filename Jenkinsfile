@@ -8,14 +8,15 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-        sh 'mvn clean package'
+        bat 'mvn clean package'
       }
     }
     
 
     stage ('Deploy') {
     	steps {
-	    	sh "cp -f target/Prueba_Maven.war /opt/Innovecture/apache-tomcat-10.0.27/webapps"
+	    	//bat "move target/webapptest.war C:/apache-tomcat-10.0.27/webapps"
+	    	bat "powershell Copy-Item target/Prueba_Maven.war -Destination C:/apache-tomcat-10.0.27/webapps"
 	  	}
 	}
 
