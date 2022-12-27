@@ -8,14 +8,14 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-        sh 'mvn clean package'
+        sh 'mvn --version'
       }
     }
     
 
     stage ('Deploy') {
     	steps {
-	    	sh "cp /var/jenkins_home/workspace/Prueba_Maven/target/Prueba_Maven.war webapps/"
+	    	sh "cp /var/jenkins_home/workspace/Prueba_Maven/target/Prueba_Maven.war /usr/local/tomcat/webapps"
 	  	}
 	}
 
