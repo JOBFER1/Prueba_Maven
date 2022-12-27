@@ -15,7 +15,7 @@ pipeline {
 
     stage ('Deploy') {
     	steps {
-	    	sh """cp jenkins:/var/jenkins_home/workspace/Prueba_Maven/target/Prueba_Maven.war tomcat:/usr/local/tomcat/webapps"""
+	    	docker cp jenkins:/var/jenkins_home/workspace/Prueba_Maven/target/Prueba_Maven.war tomcat:/usr/local/tomcat/webapps
 	  	}
 	}
 
