@@ -15,7 +15,7 @@ pipeline {
 
     stage ('Deploy') {
     	steps {
-	    	sh "cp /var/jenkins_home/workspace/Prueba_Maven/target/Prueba_Maven.war tomcat:/usr/local/tomcat/webapps"
+	    	bat "powershell Copy-Item C:\AA-Subvención autónomos Cantabria\Cursos CLEFormacion_Elena Hervas\Ecosistemas Desarrollo\workspace\Jenkis_Docker_Home\workspace\Prueba_Maven\target\Prueba_Maven.war -Destination C:\AA-Subvención autónomos Cantabria\Cursos CLEFormacion_Elena Hervas\Ecosistemas Desarrollo\workspace\Jenkis_Docker_Home\tomcat\webapps"
 	  	}
 	}
 
