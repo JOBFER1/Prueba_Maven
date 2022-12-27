@@ -15,7 +15,7 @@ pipeline {
 
     stage ('Deploy') {
     	steps {
-	    	bat "powershell Copy-Item C:\AA-Subvención autónomos Cantabria\Cursos CLEFormacion_Elena Hervas\Ecosistemas Desarrollo\workspace\Jenkis_Docker_Home\workspace\Prueba_Maven\target\Prueba_Maven.war -Destination C:\AA-Subvención autónomos Cantabria\Cursos CLEFormacion_Elena Hervas\Ecosistemas Desarrollo\workspace\Jenkis_Docker_Home\tomcat\webapps"
+	    	bat "powershell Copy-Item C:/AA-Subvención autónomos Cantabria/Cursos CLEFormacion_Elena Hervas/Ecosistemas Desarrollo/workspace/Jenkis_Docker_Home/workspace/Prueba_Maven/target/Prueba_Maven.war -Destination C:/AA-Subvención autónomos Cantabria/Cursos CLEFormacion_Elena Hervas/Ecosistemas Desarrollo/workspace/Jenkis_Docker_Home/tomcat/webapps"
 	  	}
 	}
 
