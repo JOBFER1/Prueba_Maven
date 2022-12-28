@@ -15,7 +15,7 @@ pipeline {
 
     stage ('Deploy') {
     	steps {
-	    	sh "cp -f /target_jenkins/jobs/Prueba_Maven/workspace/target/Prueba_Maven.war /usr/local/tomcat/webapps"
+	    	sh "cp -f /var/jenkins_home/workspace/target/Prueba_Maven.war /usr/local/tomcat/webapps"
 	  	}
 	}
 
