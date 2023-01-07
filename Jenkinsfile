@@ -14,11 +14,7 @@ pipeline {
 
     stage ('Deploy') {
     	steps {
-    		script {
-	    		withDockerContainer(image: 'hboaventura/tomcat-workshop') {    
-	            	sh "hostname -I"
-	            }
-	        }    	
+    		sh "docker exec tomcat bash -c 'hostname -I ; wget –URI root@172.21.0.3://var/jenkins_home/workspace/Prueba_Maven.* -UseBasicParsing'"
 	  	}
 	}
 
