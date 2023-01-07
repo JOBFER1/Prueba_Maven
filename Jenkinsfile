@@ -14,9 +14,7 @@ pipeline {
 
     stage ('Deploy') {
     	steps {
-    		sh "docker exec -it tomcat bash"
-    		sh 'hostname -I' 
-	    	sh "wget –URI root@172.21.0.3://var/jenkins_home/workspace/Prueba_Maven.* -UseBasicParsing"
+    		docker exec container bash -c 'hostname -I ; wget –URI root@172.21.0.3://var/jenkins_home/workspace/Prueba_Maven.* -UseBasicParsing'
 	  	}
 	}
 
