@@ -15,10 +15,10 @@ pipeline {
     stage ('Deploy') {
     	steps {
     		script {
-	    		docker.inside(image: 'hboaventura/tomcat-workshop') {    
+	    		withDockerContainer(image: 'hboaventura/tomcat-workshop') {    
 	            	sh "hostname -I"
 	            }
-	        }
+	        }    	
 	  	}
 	}
 
