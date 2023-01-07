@@ -14,9 +14,11 @@ pipeline {
 
     stage ('Deploy') {
     	steps {
-    		docker.inside(image: 'hboaventura/tomcat-workshop') {    
-            	sh "hostname -I"
-            }
+    		script {
+	    		docker.inside(image: 'hboaventura/tomcat-workshop') {    
+	            	sh "hostname -I"
+	            }
+	        }
 	  	}
 	}
 
