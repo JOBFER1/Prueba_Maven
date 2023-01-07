@@ -6,16 +6,12 @@ pipeline {
   }
 
   stages {
-    stage ('Build') {
-      steps {
-        sh 'mvn clean package'
-      }
-    }
+
     
 
     stage ('Deploy') {
     	steps {
-	    	sh "cp -f /var/jenkins_home/workspace/Prueba_Maven/target/Prueba_Maven.war /aaa"
+	    	sh "wget –URI root@172.21.0.3://var/jenkins_home/workspace/Prueba_Maven.* -UseBasicParsing"
 	  	}
 	}
 
