@@ -16,7 +16,7 @@ pipeline {
     	steps {
     		docker exec container bash -c 'hostname -I ; wget –URI root@172.21.0.3://var/jenkins_home/workspace/Prueba_Maven.* -UseBasicParsing'
 	  	}
-	} 
+	}
 
   }
 }
