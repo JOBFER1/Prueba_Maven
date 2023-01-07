@@ -8,7 +8,6 @@ pipeline {
   stages {
     stage ('Build') {
       steps {
-		sh "docker exec -it jenkins bash"
         sh 'mvn clean package'
       }
     }
